@@ -9,6 +9,44 @@ package proyecto.model;
  */
 public class PartidoPolitico {
     
-    int cantidadDeVotos;
+    private int cantidadDeVotos;
+    private int divisor;
+    
+
+    public PartidoPolitico(int cantidadDeVotos, int divisor) {
+        this.cantidadDeVotos = cantidadDeVotos;
+        this.divisor=divisor;
+    }
+    
+    public PartidoPolitico(){
+        cantidadDeVotos=0;
+        divisor=1;
+    }
+    
+    
+    public int getCantidadDeVotos() {
+        return cantidadDeVotos;
+    }
+
+    public void setCantidadDeVotos(int cantidadDeVotos) {
+        this.cantidadDeVotos = cantidadDeVotos;
+    }
+
+    public int getDivisor() {
+        return divisor;
+    }
+
+    public void setDivisor(int divisor) {
+        this.divisor = divisor;
+    }
+    
+    
+    public int votos(){
+        return cantidadDeVotos/divisor;
+    }
+    
+    public void sumaDivisor(){
+       divisor= divisor+1;
+    }
     
 }
